@@ -1,0 +1,146 @@
+/* table of contents----------------------------------
+1.プロフィール
+----------------------------------------------------*/
+//1.プロフィール
+//共通
+.profile {
+    border-radius: 8px;
+    border: 2px solid $color_green1;
+    margin-top: $wide*2;
+    position: relative;
+
+    &_title {
+        margin: 0 0 $wide 0;
+
+        &2 {
+            margin-bottom: 4px;
+        }
+    }
+
+    &_name {
+        margin-bottom: $wide;
+        font-weight: bold;
+        color: $color_green2;
+    }
+
+    &_link {
+        text-align: right;
+        margin-top: $wide;
+    }
+
+    &_list {
+        &_item {
+            margin: 0 0 4px 6px;
+            padding-left: 0.5em;
+            text-indent: -0.5em;
+
+            &:before {
+                content: "・";
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &_icon {
+        position: absolute;
+
+        img {
+            border-radius: 50%;
+            border: 2px solid $color_green2;
+        }
+    }
+
+    &_links {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+//PC版
+@include mq-md {
+    .profile {
+        padding: $wide*3;
+
+        &_title {
+            font-size: $large_rem;
+        }
+
+        &_name {
+            font-size: 2.4rem;
+        }
+
+        &_icon {
+            top: $wide*3;
+            right: $wide*3;
+            width: $wide*9;
+            height: $wide*9;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_links {
+            p {
+                &:not(:last-of-type) {
+                    margin-right: $wide*2;
+                }
+            }
+        }
+
+        .group {
+            dt {
+                margin: 0;
+            }
+
+            &_name {
+                margin-left: $wide*1.7;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+//SP版
+@include mq {
+    //プロフィール
+    .profile {
+        padding: $wide*1.5;
+
+        &_title {
+            font-size: $small_rem;
+        }
+
+        &_name {
+            font-size: 1.7rem;
+        }
+
+        &_icon {
+            top: $wide*1.5;
+            right: $wide*1.5;
+            width: $wide*7;
+            height: $wide*7;
+        }
+
+        &_links {
+            margin-top: $wide;
+
+            p {
+                &:not(:last-of-type) {
+                    margin-right: $wide;
+                }
+            }
+        }
+
+        .group {
+            &_title {
+
+            }
+
+            &_name {
+                margin-left: $wide*1.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.clearfix
+2.display:table
+3.calc
+4.circle
+5.opacity
+6.position
+7.flex
+8.media query
+----------------------------------------------------*/
+//1.clearfix
+@mixin clearfix {
+  *zoom:1;
+  &:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+}
+//2.display:table
+@mixin table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+//3.calc
+@mixin calc($property,$expression) {
+  #{$property}:-webkit-calc(#{$expression});
+  #{$property}:-moz-calc(#{$expression});
+  #{$property}:-ms-calc(#{$expression});
+  #{$property}:calc(#{$expression});
+}
+//4.circle
+@mixin circle($size) {
+  display: block;
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+}
+//5.opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacityIE:$opacity*100;
+  filter: alpha(opacity=$opacityIE);
+}
+//6.position
+@mixin positioncenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+//7.flex
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+@mixin flexFull {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@mixin flexwrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+//8.media query
+$breakpoint: 766px;
+$breakpoint-md: 768px;
+@mixin mq {
+    @media screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+@mixin mq-md {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}

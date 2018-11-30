@@ -1,0 +1,131 @@
+/* table of contents----------------------------------
+1.フォトギャラリー
+----------------------------------------------------*/
+//1.フォトギャラリー
+//共通
+.photog {
+    margin-top: $wide;
+
+    ul {
+        @include flexwrap;
+
+        li {
+            width: 50%;
+
+            a {
+                color: $color_black1;
+                display: block;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                    margin: 0 !important;
+                    vertical-align: top;
+                }
+            }
+
+            .smallbox {
+                padding: $wide*3;
+
+                h2 {
+                    color: $color_green1;
+
+                    span {
+                        font-size: 2.2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bigbox {
+    display: none;
+
+    h2 {
+        color: $color_green1;
+        text-align: center;
+    }
+}
+//PC版
+@include mq-md {
+    .photog {
+        ul {
+            li {
+                .smallbox {
+                    padding: $wide*3;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 3vw;
+                        margin: 0 0 $wide 0;
+                    }
+
+                    p {
+                        font-size: 2.4vw;
+                        line-height: 1.8;
+                    }
+                }
+            }
+        }
+    }
+
+    .bigbox {
+        padding: $wide*4 !important;
+        width: $wide*80;
+
+        h2 {
+            font-size: 4vw;
+            margin: 0 0 $wide*3;
+        }
+
+        p {
+            text-align: center;
+            font-size: 3.4vw;
+        }
+    }
+}
+
+//SP版
+@include mq {
+        .photog {
+            ul {
+                li {
+                    .smallbox {
+                        padding: $wide*2 $wide;
+                        text-align: center;
+
+                        h2 {
+                            font-size: 5vw;
+                            margin-bottom: $wide;
+                        }
+
+                        p {
+                            font-size: 3vw;
+                            line-height: 1.5;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bigbox {
+            padding: $wide*2 $wide*4 !important;
+
+            h2 {
+                font-size: 8vw;
+                margin-bottom: $wide*2;
+
+                span {
+                    font-size: 5vw;
+                }
+            }
+
+            p {
+                text-align: center;
+                font-size: 4.8vw;
+                line-height: 1.8;
+            }
+        }
+}

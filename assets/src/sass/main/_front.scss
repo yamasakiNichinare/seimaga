@@ -1,0 +1,41 @@
+/* table of contents----------------------------------
+1.表紙
+----------------------------------------------------*/
+//1.表紙
+//共通
+.front {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    &_date {
+        position: absolute;
+        text-align: right;
+    }
+}
+
+//PC版
+@include mq-md {
+    .front {
+        &_date {
+            top:  $wide*35;
+            right: $wide*4;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}
+
+//SP版
+@include mq {
+    .front {
+        &_date {
+            top:  $wide*14;
+            right: $wide*2;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+    }
+}

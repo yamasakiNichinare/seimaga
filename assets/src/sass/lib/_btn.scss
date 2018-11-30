@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.ボタン共通
+2.オレンジボタン
+3.グレーボタン
+----------------------------------------------------*/
+.btn {
+    font-weight: bold;
+
+    //1.ボタン共通
+    a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: $color_white1;
+        font-weight: bold;
+    }
+
+    //2.オレンジボタン
+    &_orange {
+        a {
+            background-color: $color_orange2;
+        }
+    }
+
+    //3.グレーボタン
+    &_gray {
+        background-color: $color_grey4;
+        border: none;
+        color: $color_grey2;
+    }
+}
+
+//PC版
+@include mq-md {
+    .btn {
+        a {
+            border-radius: $wide;
+            height: $wide*5.5;
+            line-height: $wide*5.5;
+            font-size: 2.4rem;
+        }
+    }
+}
+
+//SP版
+@include mq {
+    .btn {
+        a {
+            border-radius: 4px;
+            height: $wide*4.4;
+            line-height: $wide*4.4;
+            font-size: 2rem;
+        }
+    }
+}

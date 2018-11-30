@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.単位
+2.ul,olリセット
+3.figureリセット
+4.フォント指定
+----------------------------------------------------*/
+//1.単位
+$tiny_rem: 1rem;
+$small_rem: 1.2rem;
+$normal_rem: 1.4rem;
+$large_rem: 1.6rem;
+$huge_rem: 1.8rem;
+$wide: 10px;
+
+//2.ul,olリセット
+ul,ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+//3.figure,p,hタグリセット
+figure,h1,h2,h2,p {
+    margin: 0;
+    padding: 0;
+}
+
+//4.フォント指定
+html {
+    font-size: 62.5%;
+}
+body {
+    color: $color_black2;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+.text {
+    &_bold {
+        font-weight: bold;
+    }
+}
+
+//5.画像
+img {
+    vertical-align: top;
+}
+
+//6.リンク
+.link {
+    a {
+        color: $color_blue;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+//7.カテゴリ
+.cate {
+    color: $color_white1;
+}
+.cate1 {
+    background-color: $cate1;
+}
+.cate2 {
+    background-color: $cate2;
+}
+.cate3 {
+    background-color: $cate3;
+}
+.cate4 {
+    background-color: $cate4;
+}
+.cate5 {
+    background-color: $cate5;
+}
+.cate6 {
+    background-color: $cate6;
+}

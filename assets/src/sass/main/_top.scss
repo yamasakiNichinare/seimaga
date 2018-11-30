@@ -1,0 +1,133 @@
+/* table of contents----------------------------------
+1.トップ
+----------------------------------------------------*/
+//1.トップ
+//共通
+.top_list {
+    &_item {
+        border-top: 1px solid $color_grey1;
+
+        h1 {
+            position: relative;
+
+            .fa-chevron-right {
+                position: absolute;
+                color: $color_grey2;
+            }
+        }
+    }
+
+    //PC版
+    @include mq-md {
+        .top_list {
+            &_item {
+                position: relative;
+
+                &_inner {
+                    display: flex;
+
+                    //サムネイル
+                    figure {
+                        width: $wide*30;
+                        overflow: hidden;
+                        height: $wide*53.4;
+
+                        img {
+                            width: 100%;
+                            transition-duration: 0.3s;
+                        }
+                    }
+                }
+
+                &_bottom {
+                    @include flexCenter;
+                    justify-content: space-between;
+                    color: $color_grey2;
+                }
+
+                .bottom {
+                    position: absolute;
+                    right: $wide*3;
+                    width: 58%;
+                    top: 30%;
+                }
+
+                a {
+                    color: $color_black2;
+                    padding: $wide*4;
+                    display: block;
+                    text-decoration: none;
+                    transition: all .2s ease-in-out;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row-reverse;
+                    width: 100%;
+
+                    figure {
+                        width: $wide*30;
+                    }
+
+                    &:hover {
+                        background-color: $color_grey4;
+
+                        img {
+                            transform: scale(1.1);
+                            transition-duration: 0.3s;
+                        }
+                    }
+                }
+
+                h1 {
+                    font-size: 2.6rem;
+                    margin: $wide 0;
+                    padding-right: $wide*3;
+                    width: calc(100% - 300px);
+                    box-sizing: border-box;
+                    padding-left: $wide*3;
+
+                    .fa-chevron-right {
+                        top: 8px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    //SP版
+    @include mq {
+        .top_list {
+            &_item {
+                &_bottom {
+                    @include flexCenter;
+                    justify-content: space-between;
+                    font-size: $small_rem;
+                    color: $color_grey2;
+                    padding: $wide*2;
+                }
+
+                a {
+                    color: $color_black2;
+                    padding: $wide*2 $wide*2 0;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                h1 {
+                    font-size: $huge_rem;
+                    line-height: 1.3;
+                    margin: 0 0 $wide 0;
+                    padding-right: $wide*2;
+
+                    .fa-chevron-right {
+                        top: 50%;
+                        transform: translate(0,-50%);
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

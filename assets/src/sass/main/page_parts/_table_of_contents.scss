@@ -1,0 +1,61 @@
+/* table of contents----------------------------------
+1.SNSシェアボタン
+----------------------------------------------------*/
+//1.SNSシェアボタン
+//共通
+.tableofcontents {
+    &_title {
+        margin: 0 0 $wide 0;
+    }
+
+    &_list {
+        &_item {
+            &:before {
+                content: "・";
+                display: inline-block;
+                vertical-align: middle;
+                width: $wide*2;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+//PC版
+@include mq-md {
+    .tableofcontents {
+        margin-bottom: $wide*3;
+        padding: $wide*3 0;
+        border-top: 2px solid $color_grey3;
+        border-bottom: 2px solid $color_grey3;
+    }
+}
+
+//SP版
+@include mq {
+    //目次
+    .tableofcontents {
+        margin-bottom: $wide*2;
+        padding: $wide*2 0;
+        border-top:1px solid $color_grey3;
+        border-bottom:1px solid $color_grey3;
+
+        &_title {
+            font-size: $large_rem;
+        }
+
+        &_list {
+            &_item {
+                display: flex;
+
+                a {
+                    width: calc(100% - 20px);
+                    font-size: $large_rem;
+                }
+            }
+        }
+    }
+}

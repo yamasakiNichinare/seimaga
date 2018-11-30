@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.リンク
+2.画像
+3.カテゴリ
+----------------------------------------------------*/
+//PC版
+@include mq-md {
+    //1.フォント指定
+    body {
+        font-size: $large_rem;
+        background-color: $color_green3;
+    }
+
+    //2.幅指定
+    body,html {
+        min-width: $wide*98;
+    }
+    .wrapper {
+        width: $wide*98;
+        margin: 0 auto;
+        background-color: $color_white1;
+    }
+
+    //3.カテゴリ
+    .cate {
+        padding: 0 8px;
+        border-radius: 4px;
+    }
+
+    //4.リンク
+    a {
+        transition: all .2s ease-in-out;
+    }
+}
+
+//SP版
+@include mq {
+    //1.リンク
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    //2.画像
+    img {
+        width: 100%;
+    }
+
+    //3.カテゴリ
+    .cate {
+        padding: 0 4px;
+        border-radius: 2px;
+    }
+}
