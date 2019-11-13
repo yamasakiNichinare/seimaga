@@ -9,44 +9,36 @@
 
     a {
         border-radius:50%;
-        background: $color_white1;
-        border: 2px solid $color_green1;
-        color: $color_green1;
-        text-align: center;
-        text-decoration: none;
         display: block;
     }
 }
 
 //PC版
-@include mq-md {
+@include pc {
     .button-pagetop {
         right: $wide*4;
         bottom: $wide*4;
 
         a {
-            width: $wide*6;
-            height: $wide*6;
-            line-height: $wide*6;
-            
-            &:hover {
-                background: $color_green1;
-                color: $color_white1;
+            width: $wide*10;
+            height: $wide*10;
+
+            img {
+                width: 100%;
             }
         }
     }
 }
 
 //SP版
-@include mq {
+@include sp {
     .button-pagetop {
         right: $wide*2;
         bottom: $wide*2;
 
         a {
-            width: $wide*4.4;
-            height: $wide*4.4;
-            line-height: $wide*4.4;
+            width: $wide*7.4;
+            height: $wide*7.4;
         }
     }
 }

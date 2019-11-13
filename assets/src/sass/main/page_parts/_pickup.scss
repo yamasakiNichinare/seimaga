@@ -1,0 +1,75 @@
+/* table of contents----------------------------------
+1.声マガpick up
+----------------------------------------------------*/
+
+//1.声マガpick up
+//共通
+.box_pickup {
+    @include pc {
+        margin-top: $wide*2;
+        padding: 0 $wide*4 $wide*4;
+    }
+    @include sp {
+        margin-top: $wide;
+        padding: 0 $wide*2 $wide*2;
+    }
+    &_title {
+        background: $color_green4;
+        font-weight: bold;
+        @include pc {
+            line-height: $wide*4;
+            padding-left: $wide;
+            margin-bottom: $wide*2;
+            font-size: 2rem;
+        }
+        @include sp {
+            line-height: $wide*3;
+            margin-bottom: $wide;
+            font-size: $large_rem;
+            padding-left: $wide;
+        }
+    }
+    &_list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include pc {
+            padding: 0 $wide*4;
+        }
+        &_item {
+            width: 48%;
+
+            a {
+                position: relative;
+                @include pc {
+                    padding-bottom: $wide*8;
+                    &:hover {
+                        h3 {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                @include sp {
+                    flex-direction: column-reverse;
+                }
+                img {
+                    width: 100%;
+                }
+                h3 {
+                    @include pc {
+                        position: absolute;
+                        transform: translate(-50%, 0);
+                        left: 50%;
+                        bottom: 0;
+                        width: 242px;
+                        margin: 0;
+                        text-decoration: underline;
+                    }
+                    text-align: center;
+                    @include sp {
+                        font-size: 3.6vw;
+                    }
+                }
+            }
+        }
+    }
+}

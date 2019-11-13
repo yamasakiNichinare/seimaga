@@ -12,12 +12,6 @@ $(function() {
             topBtn.fadeOut();
         }
     });
-    topBtn.click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
 });
 
 $(function() {
@@ -29,6 +23,22 @@ $(function() {
         } else {
             topBtn.fadeOut();
         }
+    });
+});
+$(function() {
+    var topBtn = $('.btnarchives');
+    topBtn.hide();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+});
+$(function() {
+    $('.activity_btn').on('click',function() {
+        $('.activity').css('display:none');
     });
 });
 $(function() {
