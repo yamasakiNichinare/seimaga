@@ -2332,6 +2332,54 @@ textarea {
 /* table of contents----------------------------------
 1.活躍状況
 ----------------------------------------------------*/
+.activity_text {
+  font-size: 1.2rem;
+}
+.activity_text:first-of-type {
+  margin-top: -4px;
+}
+.activity_text:nth-of-type(2) {
+  margin-bottom: 14px;
+}
+
+.aselect {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+  margin: 20px 0;
+  font-size: 1.6rem;
+}
+.aselect:before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+.aselect_sel {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+
 .activity {
   position: fixed;
 }
@@ -2360,6 +2408,10 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+  .aselect {
+    width: 400px;
+  }
+
   .activity {
     bottom: 30px;
     left: 30px;
@@ -2382,6 +2434,19 @@ textarea {
     top: -40px;
     right: -20px;
     font-size: 4rem;
+  }
+
+  .ahistory {
+    margin-top: 30px;
+  }
+  .ahistory_title {
+    font-size: 1.6rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 6px;
+    margin-bottom: 8px;
+  }
+  .ahistory_list_item {
+    margin-right: 16px;
   }
 }
 @media screen and (max-width: 766px) {
@@ -2408,6 +2473,26 @@ textarea {
     top: -32px;
     right: -12px;
     font-size: 3rem;
+  }
+
+  .ahistory {
+    margin-top: 30px;
+  }
+  .ahistory_title {
+    font-size: 1.6rem;
+    border-left: 4px solid #2e7d32;
+    padding-left: 6px;
+    margin-bottom: 8px;
+  }
+  .ahistory_list {
+    flex-wrap: wrap;
+  }
+  .ahistory_list_item {
+    margin: 0 20px 20px 0;
+    font-size: 1.6rem;
+  }
+  .ahistory_list_item a {
+    font-size: 1.6rem;
   }
 }
 /* table of contents----------------------------------
