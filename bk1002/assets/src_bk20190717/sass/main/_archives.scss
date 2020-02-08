@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.声優アーカイブ
+----------------------------------------------------*/
+//1.声優アーカイブ
+//共通
+.btnarchives {
+    position: fixed;
+}
+
+//PC版
+@include pc {
+    .btnarchives {
+        bottom: $wide*3;
+        right: $wide*3;
+
+        img {
+            width: $wide*10;
+        }
+    }
+
+    .archives_list {
+        margin: $wide*2 0 0;
+        border-top: 1px solid $color_grey1;
+
+        &_item {
+            border-bottom: 1px solid $color_grey1;
+
+            a {
+                display: block;
+                position: relative;
+                padding: $wide*3;
+                text-decoration: none;
+                transition: all .2s ease-in;
+
+                &:hover {
+                    background-color: $color_grey4;
+                }
+
+                .inner {
+                    display: flex;
+
+                    >div {
+                        padding-left: $wide*3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+
+                figure {
+                    width: $wide*20;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                h2 {
+                    color: $color_black2;
+                }
+
+                .timezone {
+                    color: $color_grey2;
+                }
+
+                .fa-chevron-right {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0,-50%);
+                    right: $wide;
+                    font-size: $huge_rem;
+                    color: $color_grey2;
+                }
+            }
+        }
+    }
+}
+
+//SP版
+@include sp {
+    .btnarchives {
+        bottom: $wide;
+        right: $wide;
+
+        img {
+            width: $wide*7.4;
+        }
+    }
+    .archives_list {
+        margin: $wide*2 -20px -20px;
+        border-top: 1px solid $color_grey1;
+
+        &_item {
+            border-bottom: 1px solid $color_grey1;
+
+            a {
+                display: block;
+                position: relative;
+                padding: $wide*1.2;
+
+                .inner {
+                    display: flex;
+
+                    >div {
+                        width: calc(100vw - 124px);
+                        padding-left: $wide;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+
+                figure {
+                    width: $wide*9;
+                }
+
+                h2 {
+                    color: $color_black2;
+                }
+
+                .timezone {
+                    color: $color_grey2;
+                }
+
+                .fa-chevron-right {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0,-50%);
+                    right: $wide;
+                    font-size: $huge_rem;
+                    color: $color_grey2;
+                }
+            }
+        }
+    }
+}

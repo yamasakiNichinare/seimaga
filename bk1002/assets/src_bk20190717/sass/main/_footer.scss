@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.フッター
+----------------------------------------------------*/
+//1.フッター
+//共通
+.footer {
+    background: $color_green1;
+    color: $color_white1;
+
+    a {
+        color: $color_white1;
+    }
+
+    small {
+        display: block;
+        text-align: center;
+    }
+
+    &_main {
+        &_twitter {
+            a {
+                text-decoration: none;
+                background-color: $tw;
+                display: inline-block;
+                box-shadow: 1px 1px 1px #444;
+            }
+        }
+    }
+}
+
+//PC
+@include pc {
+    .footer {
+        width: 100%;
+
+        &_inner {
+            width: $wide*98;
+            margin: 0 auto;
+            padding: $wide*4;
+            box-sizing: border-box;
+        }
+
+        &_content {
+            @include flexCenter;
+        }
+
+        &_main {
+            width: $wide*36;
+
+            p {
+                text-align: center;
+            }
+
+            &_logo {
+                img {
+                    width: $wide*20;
+                }
+            }
+
+            &_description {
+                margin-top: $wide*2;
+                font-size: $small_rem;
+            }
+
+            &_twitter {
+                margin-top: $wide*2;
+
+                a {
+                    padding: 0 8px;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        &_list {
+            @include flexCenter;
+            flex-wrap: wrap;
+			margin: 0 $wide*2 0 $wide*8;
+
+            &_item {
+                line-height: 2;
+
+                &:not(:last-of-type) {
+                    margin-right: $wide*2;
+                }
+
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        small {
+            margin-top: $wide*3;
+        }
+    }
+}
+
+//sp
+@include sp {
+    .footer {
+        width: 100vw;
+
+        &_inner {
+            padding: $wide*3 $wide*2;
+        }
+
+        &_main {
+            p {
+                text-align: center;
+                font-size: $small_rem;
+
+                img {
+                    width: $wide*20;
+                }
+            }
+
+            &_logo {
+                margin-bottom: $wide;
+            }
+
+            &_description {
+                margin-bottom: $wide;
+            }
+
+            &_twitter {
+                margin-bottom: $wide*3;
+
+                a {
+                    padding: 0 8px;
+                    border-radius: 2px;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        &_list {
+            @include flexwrap;
+            justify-content: center;
+
+            &_item {
+                &:not(:last-of-type) {
+                    margin: 0 $wide*2 $wide*2 0;
+                }
+            }
+        }
+
+        small {
+            margin-top: $wide*2;
+        }
+    }
+}

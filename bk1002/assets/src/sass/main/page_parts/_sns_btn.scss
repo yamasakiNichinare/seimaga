@@ -1,0 +1,94 @@
+/* table of contents----------------------------------
+1.SNSシェアボタン
+----------------------------------------------------*/
+//1.SNSシェアボタン
+//共通
+.sns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_item {
+        width: 32%;
+
+        a {
+            color: $color_white1;
+            height: $wide*5;
+            font-size: 3rem;
+            line-height: $wide*5;
+            text-align: center;
+            border-radius: 6px;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        &_twitter {
+            a {
+                background-color: $tw;
+            }
+        }
+
+        &_line {
+            a {
+                background-color: $line;
+            }
+        }
+
+        &_pocket {
+            a {
+                background-color: $pocket;
+            }
+        }
+    }
+}
+
+//PC版
+@include pc {
+    //SNS
+    .sns {
+        margin-bottom: $wide*3;
+
+        &_item {
+            &_twitter {
+                a {
+                    border: 1px solid $tw;
+                    font-size: 2.6rem;
+
+                    &:hover {
+                        background-color: $color_white1;
+                        color: $tw;
+                    }
+                }
+            }
+
+            &_line {
+                a {
+                    border: 1px solid $line;
+
+                    &:hover {
+                        background-color: $color_white1;
+                        color: $line;
+                    }
+                }
+            }
+
+            &_pocket {
+                a {
+                    border: 1px solid $pocket;
+
+                    &:hover {
+                        background-color: $color_white1;
+                        color: $pocket;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//SP版
+@include sp {
+    .sns {
+        margin-bottom: $wide*2;
+    }
+}

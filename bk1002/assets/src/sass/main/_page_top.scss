@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.トップへ戻るボタン
+----------------------------------------------------*/
+//1.トップへ戻るボタン
+//共通
+.button-pagetop {
+    position: fixed;
+
+    a {
+        border-radius:50%;
+        display: block;
+    }
+}
+
+//PC版
+@include pc {
+    .button-pagetop {
+        right: $wide*4;
+        bottom: $wide*4;
+
+        a {
+            width: $wide*10;
+            height: $wide*10;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//SP版
+@include sp {
+    .button-pagetop {
+        right: $wide*2;
+        bottom: $wide*2;
+
+        a {
+            width: $wide*7.4;
+            height: $wide*7.4;
+        }
+    }
+}

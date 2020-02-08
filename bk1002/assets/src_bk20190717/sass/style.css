@@ -1,0 +1,2591 @@
+@charset "UTF-8";
+/* table of contents----------------------------------
+1.カラー
+----------------------------------------------------*/
+/* table of contents----------------------------------
+1.clearfix
+2.display:table
+3.calc
+4.circle
+5.opacity
+6.position center
+----------------------------------------------------*/
+/*! normalize.css v7.0.0 | MIT License | github.com/jonathantneal/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 12, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+     ========================================================================== */
+/**
+   * Add the correct display in IE 8-.
+   */
+/* line 25, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+/* line 39, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Add the correct display in IE 8-.
+   */
+/* line 51, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+figcaption,
+figure {
+  display: block; }
+
+/**
+   * Add the correct margin in IE 8-.
+   */
+/* line 60, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+/* line 69, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+   * Add the correct display in IE.
+   */
+/* line 79, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+main {
+  display: block; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 88, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * 1. Remove the gray background on active links in IE 10.
+   * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+   */
+/* line 101, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+   * 1. Remove the bottom border in Firefox 39-.
+   * 2. Add the correct text decoration in Chrome 57-, Edge, IE, Opera,
+        and Safari.
+   */
+/* line 112, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+   * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+   */
+/* line 122, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+/* line 131, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+/* line 141, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+   * Add the correct font style in Android 4.3-.
+   */
+/* line 152, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+dfn {
+  font-style: italic; }
+
+/**
+   * Add the correct background and color in IE 8-.
+   */
+/* line 160, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+   * Add the correct font size in all browsers.
+   */
+/* line 169, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+small {
+  font-size: 80%; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Add the correct display in IE 9-.
+   */
+/* line 180, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+audio,
+video {
+  display: inline-block; }
+
+/**
+   * Add the correct display in iOS 4-7.
+   */
+/* line 189, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+   * Remove the border on images inside links in IE 10-.
+   */
+/* line 198, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+img {
+  border-style: none;
+  vertical-align: top; }
+
+/**
+   * Hide the overflow in IE.
+   */
+/* line 207, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * Remove the margin in Firefox and Safari.
+   */
+/* line 218, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+   * 1. Show the overflow in IE.
+   * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
+   */
+/* line 231, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+button {
+  overflow: visible;
+  /* 1 */
+  text-transform: none;
+  /* 2 */ }
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+/* line 240, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+   * Prevent a WebKit bug where (2) destroys native `audio` and `video` controls
+   * in Android 4.
+   */
+/* line 252, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+html [type="button"] {
+  -webkit-appearance: button; }
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+/* line 260, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+/* line 272, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+   * Correct the padding in Firefox.
+   */
+/* line 283, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+   * Show the overflow in Edge and IE.
+   */
+/* line 291, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+input {
+  overflow: visible; }
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+/* line 302, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+   * 1. Add the correct display in Edge and IE.
+   * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+/* line 316, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+   * Remove the inheritance of text transform in Firefox.
+   */
+/* line 325, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+select {
+  text-transform: none; }
+
+/**
+   * Remove the default vertical scrollbar in IE.
+   */
+/* line 333, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+textarea {
+  overflow: auto; }
+
+/**
+   * 1. Add the correct box sizing in IE 10-.
+   * 2. Remove the padding in IE 10-.
+   */
+/* line 342, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+/* line 352, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+/* line 362, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+   * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+   */
+/* line 371, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+/* line 381, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, Firefox 48-, and IE.
+   */
+/* line 393, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+details {
+  display: block; }
+
+/*
+   * Add the correct display in all browsers.
+   */
+/* line 401, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+summary {
+  display: list-item; }
+
+/* Scripting
+     ========================================================================== */
+/**
+   * Add the correct display in IE 9-.
+   */
+/* line 412, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+canvas {
+  display: inline-block; }
+
+/**
+   * Add the correct display in IE.
+   */
+/* line 420, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+template {
+  display: none; }
+
+/* Hidden
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10-.
+   */
+/* line 431, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+[hidden] {
+  display: none; }
+
+/* line 435, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_reset.scss */
+strong {
+  font-weight: normal; }
+
+/* table of contents----------------------------------
+1.画像パス
+2.margin,padding
+3.文字サイズ
+4.画像
+5.リスト調整
+6.リンク調整
+7.bodyなど調整
+8.文字調整
+9.受講生専用サイト
+10.inputなどの調整
+11.firefox枠線調整
+12.ログイン
+----------------------------------------------------*/
+/* line 28, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+img {
+  display: block;
+  object-fit: cover; }
+
+/* line 33, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+ul {
+  list-style: none; }
+
+/* line 37, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+a {
+  text-decoration: none; }
+  /* line 39, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+  a.withBorder {
+    text-decoration: underline; }
+    /* line 41, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+    a.withBorder:hover {
+      text-decoration: none; }
+
+/* line 47, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.withUnderLine a {
+  text-decoration: underline;
+  color: #03A9F4; }
+  /* line 50, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+  .withUnderLine a:hover {
+    text-decoration: none; }
+
+/* line 56, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 59, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+body {
+  font-family: "Rounded Mplus 1c",helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 1.4em;
+  letter-spacing: 0.8px;
+  color: #505050; }
+
+/* line 69, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+ul {
+  margin: 0;
+  padding: 0; }
+
+/* line 73, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.box__lightblue {
+  background: #c3d7f2; }
+
+/* line 76, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.box__white {
+  background: #fff;
+  border-radius: 10px; }
+
+/* line 81, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0; }
+
+/* line 87, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.btnArea a {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  color: #001b43;
+  background: #fff;
+  border: 2px solid #001b43;
+  border-radius: 4px; }
+
+/* line 98, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="button"],
+input[type="number"],
+input[type="submit"], select, textarea {
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  color: #505050;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; }
+
+/* line 117, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+select {
+  background: url("../images/common/icon_arrow_bottom.png") no-repeat 90% center;
+  background-size: 18%;
+  padding: 0 10px; }
+
+/* line 122, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+textarea {
+  resize: none; }
+
+/* line 125, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.checkbox:checked + .checkbox_parts::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #001b43;
+  border-right: 3px solid #001b43; }
+
+/* line 138, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.birth ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+/* line 143, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.must {
+  background: #b6edd9;
+  color: #fff;
+  border-radius: 4px; }
+
+/* line 148, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+label.error {
+  color: #c91212;
+  font-weight: bold;
+  position: relative;
+  top: 3px;
+  left: 3px; }
+
+/* line 155, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+input[type="submit"] {
+  line-height: 1; }
+
+/* line 159, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+a::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+  border: 0px; }
+
+/* line 167, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.loginList li {
+  display: flex;
+  align-items: center; }
+
+/* line 171, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+select::-ms-expand {
+  display: none; }
+
+/* line 174, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_setting.scss */
+.redText {
+  color: #c91212; }
+
+/* table of contents----------------------------------
+1.画像パス
+2.margin,padding
+3.文字サイズ
+4.画像
+5.リスト調整
+6.リンク調整
+7.body調整
+----------------------------------------------------*/
+/* line 13, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_thebuttons.scss */
+.button a {
+  display: block;
+  border-radius: 4px;
+  text-align: center; }
+
+/* line 20, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_thebuttons.scss */
+.button--orange a,
+.button--orange input {
+  color: #001b43 !important;
+  text-align: center;
+  background: #b6edd9;
+  box-shadow: 0 3px 0 #446644;
+  transition: all linear 0.2s;
+  cursor: pointer; }
+  /* line 28, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_thebuttons.scss */
+  .button--orange a:hover,
+  .button--orange input:hover {
+    box-shadow: none;
+    transform: translateY(3px); }
+
+/* line 35, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_thebuttons.scss */
+.button--back a {
+  border: 2px solid #001b43;
+  background: #fff;
+  color: #001b43;
+  font-weight: bold; }
+
+/* line 43, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/lib/_thebuttons.scss */
+.button--gray a,
+.button--gray input {
+  color: #fff !important;
+  text-align: center;
+  background: #ddd;
+  transition: all linear 0.2s;
+  cursor: default !important; }
+
+@media only screen and (min-width: 768px) {
+  /* table of contents----------------------------------
+1.フッター
+2.ボタンエリア
+----------------------------------------------------*/
+  /* line 7, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+  .footer {
+    font-size: 1rem;
+    background: #001b43;
+    padding: 30px 10px;
+    color: #fff;
+    text-align: center; }
+    /* line 13, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .footer ul {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0; }
+      /* line 17, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+      .footer ul li {
+        display: inline-block; }
+      /* line 21, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+      .footer ul.sns li {
+        margin-right: 24px; }
+        /* line 25, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li:nth-child(1) a:hover {
+          color: #55acee; }
+        /* line 32, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li:nth-child(2) a:hover {
+          color: #3B5998; }
+        /* line 39, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li:nth-child(3) a:hover {
+          color: #00c300; }
+        /* line 44, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li:last-of-type {
+          margin: 0; }
+        /* line 47, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li a {
+          font-size: 4rem;
+          color: #fff;
+          padding: 0;
+          margin: 0;
+          display: block;
+          height: 35px; }
+        /* line 55, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.sns li .fa-twitter-square {
+          position: relative; }
+          /* line 57, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+          .footer ul.sns li .fa-twitter-square:after {
+            position: absolute;
+            content: "";
+            background: #fff;
+            top: 10px;
+            left: 3px;
+            width: 35px;
+            height: 35px;
+            display: block; }
+      /* line 71, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+      .footer ul.info li {
+        margin-right: 14px; }
+        /* line 73, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.info li:last-of-type {
+          margin: 0; }
+        /* line 76, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+        .footer ul.info li a {
+          font-size: 1.6rem;
+          color: #fff; }
+    /* line 83, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .footer small {
+      text-align: center;
+      display: block;
+      font-size: 1.4rem; }
+  /* line 91, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+  .btnArea div {
+    margin: 40px auto;
+    width: 400px; }
+    /* line 94, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .btnArea div:last-of-type {
+      margin-top: 40px; }
+  /* line 98, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+  .btnArea a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 2rem;
+    transition: all linear 0.3s; }
+    /* line 103, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .btnArea a:hover {
+      background: #001b43;
+      color: #fff; }
+    /* line 107, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .btnArea a .fa-clipboard {
+      margin-right: 4px;
+      font-size: 2rem; }
+    /* line 111, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_footer.scss */
+    .btnArea a .fa-question-circle {
+      margin-right: 4px;
+      font-size: 2rem; }
+  /* table of contents----------------------------------
+1.ヘッダー
+----------------------------------------------------*/
+  /* line 5, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 4px solid #001b43;
+    padding: 20px 0; }
+    /* line 15, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+    .header a {
+      color: #505050; }
+    /* line 18, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 980px;
+      margin: 0 auto; }
+    /* line 24, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+    .header__left {
+      width: 70%; }
+      /* line 26, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+      .header__left__inner {
+        display: table;
+        table-layout: fixed;
+        width: 100%; }
+        /* line 28, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__left__inner a {
+          display: block; }
+        /* line 31, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__left__inner div {
+          display: table-cell;
+          vertical-align: middle; }
+        /* line 35, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__left__inner .img {
+          width: 90px; }
+          /* line 37, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header__left__inner .img img {
+            width: 80px; }
+        /* line 42, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__left__inner .text p {
+          font-size: 1.6rem;
+          line-height: 1.4; }
+        /* line 46, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__left__inner .text h1 {
+          font-size: 3rem; }
+          /* line 48, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header__left__inner .text h1 img {
+            width: 470px; }
+    /* line 55, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+    .header__right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 30%; }
+      /* line 59, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+      .header__right .info {
+        text-align: center; }
+        /* line 61, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__right .info_tel {
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: #001b43; }
+          /* line 66, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header__right .info_tel .fa-mobile-alt {
+            margin-right: 4px;
+            font-size: 2rem; }
+        /* line 71, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__right .info_date {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+          color: #001b43;
+          font-weight: bold;
+          letter-spacing: 2px; }
+      /* line 79, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+      .header__right ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        /* line 83, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__right ul li a {
+          font-size: 1.4rem; }
+          /* line 85, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header__right ul li a:hover {
+            text-decoration: underline; }
+      /* line 92, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+      .header__right .button a {
+        font-size: 1.8rem;
+        padding: 8px 14px;
+        line-height: 1.4;
+        color: #fff; }
+        /* line 97, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header__right .button a .fa-file-alt {
+          margin-right: 4px; }
+    /* line 103, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+    .header nav {
+      width: 980px;
+      margin: 20px auto 0;
+      padding: 0 10px;
+      box-sizing: border-box; }
+      /* line 108, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+      .header nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        /* line 111, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+        .header nav ul li {
+          display: inline-block; }
+          /* line 113, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header nav ul li a {
+            font-size: 1.4rem;
+            position: relative; }
+            /* line 116, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+            .header nav ul li a:before {
+              left: 0;
+              top: -2px;
+              position: absolute;
+              opacity: 0;
+              width: 0%;
+              height: 2px;
+              content: "";
+              background: #001b43;
+              transition: all 0.3s; }
+            /* line 127, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+            .header nav ul li a:after {
+              right: 0;
+              bottom: -2px;
+              position: absolute;
+              opacity: 0;
+              width: 0%;
+              height: 2px;
+              content: "";
+              background: #001b43;
+              transition: all 0.3s; }
+          /* line 139, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_header.scss */
+          .header nav ul li a:hover:before,
+          .header nav ul li a:hover:after {
+            opacity: 1;
+            width: 100%; }
+  /* table of contents----------------------------------
+1.PC用
+2.SP用
+----------------------------------------------------*/
+  /* line 7, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_media_query.scss */
+  .forPC {
+    display: block; }
+  /* line 11, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_media_query.scss */
+  .forSP {
+    display: none !important; }
+  /* table of contents----------------------------------
+1.ページトップ
+----------------------------------------------------*/
+  /* line 6, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_page_top.scss */
+  #toTheTop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    z-index: 10; }
+    /* line 12, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_page_top.scss */
+    #toTheTop a {
+      display: block;
+      color: #fff;
+      font-size: 5rem;
+      text-decoration: none;
+      border: 1px solid #001b43;
+      border-radius: 50%;
+      background: #001b43; }
+      /* line 20, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_page_top.scss */
+      #toTheTop a:hover {
+        opacity: 0.7; }
+  /* table of contents----------------------------------
+1.swipe
+----------------------------------------------------*/
+  /* line 6, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper-container {
+    height: 400px;
+    width: 980px;
+    margin: 0 auto; }
+  /* line 11, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper_img {
+    padding: 30px;
+    box-sizing: border-box; }
+  /* line 15, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper_img01 {
+    background-color: #001b43;
+    color: #fff; }
+    /* line 18, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+    .swiper_img01 p {
+      line-height: 1.5;
+      font-size: 2rem;
+      text-align: center; }
+      /* line 22, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img01 p.p1 {
+        font-weight: bold;
+        font-size: 4rem;
+        margin-bottom: 24px; }
+      /* line 27, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img01 p.p2 {
+        font-size: 3.2rem;
+        margin-bottom: 24px; }
+      /* line 31, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img01 p.p3 {
+        font-size: 2.8rem;
+        color: #b6edd9; }
+  /* line 37, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper_img02 {
+    background: #b6edd9 url("../images/top/icon_bg_may.png") no-repeat 92% 88%;
+    background-size: 18%;
+    color: #001b43;
+    padding: 70px; }
+    /* line 44, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+    .swiper_img02 p {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      width: 758px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-size: 2rem;
+      margin: 0 auto 10px; }
+      /* line 51, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img02 p.p1 {
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 12px;
+        text-align: center; }
+      /* line 57, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img02 p:last-of-type {
+        margin-bottom: 0; }
+      /* line 60, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img02 p span {
+        display: table-cell;
+        vertical-align: top; }
+        /* line 63, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+        .swiper_img02 p span.number {
+          width: 50px; }
+        /* line 66, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+        .swiper_img02 p span.text {
+          width: 100%; }
+  /* line 72, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper_img03 {
+    background: #001b43;
+    color: #fff;
+    padding: 30px 57px; }
+    /* line 76, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+    .swiper_img03 p {
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.4;
+      color: #b6edd9; }
+      /* line 81, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img03 p.p1 {
+        margin-bottom: 14px; }
+      /* line 84, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img03 p.p2 {
+        margin-top: 14px; }
+    /* line 88, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+    .swiper_img03 ol {
+      list-style-type: decimal;
+      padding: 0 40px; }
+      /* line 91, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img03 ol li {
+        margin-bottom: 11px;
+        line-height: 1.5; }
+        /* line 94, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+        .swiper_img03 ol li:last-of-type {
+          margin: 0; }
+  /* line 100, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper_img04 {
+    background: #b6edd9; }
+    /* line 102, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+    .swiper_img04 a {
+      display: block;
+      font-size: 4rem;
+      font-weight: bold; }
+      /* line 106, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img04 a p {
+        line-height: 1.5;
+        text-align: center;
+        color: #505050; }
+      /* line 111, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img04 a .t_color {
+        color: #fff; }
+      /* line 114, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+      .swiper_img04 a .fa-twitter-square {
+        font-size: 6rem;
+        margin-top: 20px; }
+  /* line 120, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/common/_swipe.scss */
+  .swiper-pagination-bullet-active {
+    background: #fff; }
+  /* table of contents----------------------------------
+1.共通
+2.最新情報
+3.特色
+4.個人情報
+5.会社概要
+6.フォーム
+7.レッスン概要
+8.グループプロダクション
+9.よくある質問
+10.サイトマップ
+11.ログイン
+12.リンク
+13.審査日程
+14.みなさまへ
+15.レッスンスタジオ
+----------------------------------------------------*/
+  /* line 20, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .wrapper {
+    padding: 160px 0 60px;
+    background: #c3d7f2; }
+    /* line 23, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .wall {
+      width: 100%;
+      padding-top: 60px;
+      font-size: 1.6rem; }
+      /* line 27, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .wall__inner {
+        width: 980px;
+        margin: 0 auto;
+        display: flex; }
+        /* line 31, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .wall__inner main {
+          width: 80%;
+          padding-right: 30px; }
+          /* line 34, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          .wrapper .wall__inner main section {
+            margin-bottom: 60px;
+            padding: 0; }
+          /* line 38, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          .wrapper .wall__inner main #production {
+            margin: 0; }
+        /* line 42, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .wall__inner .sidebar {
+          width: 20%; }
+    /* line 47, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .box__white {
+      padding: 44px 24px; }
+    /* line 51, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .box h2 {
+      color: #001b43;
+      text-align: center;
+      font-size: 3.4rem;
+      position: relative;
+      margin-bottom: 20px; }
+    /* line 60, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .box__contents__inner p {
+      line-height: 1.7; }
+    /* line 65, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .box section {
+      margin-bottom: 60px; }
+      /* line 67, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .box section:last-of-type {
+        margin: 0; }
+      /* line 70, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .box section h3 {
+        margin-bottom: 24px;
+        line-height: 1.4;
+        position: relative;
+        border-top: 2px solid #001b43;
+        border-bottom: 2px solid #001b43;
+        padding: 8px 0; }
+      /* line 78, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .box section section {
+        margin-bottom: 18px; }
+        /* line 80, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .box section section h4 {
+          margin-bottom: 8px;
+          line-height: 1.4; }
+          /* line 83, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          .wrapper .box section section h4.class {
+            background: #001b43;
+            color: #fff;
+            border-radius: 2px;
+            padding: 2px 4px;
+            display: inline-block; }
+        /* line 91, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .box section section > .small {
+          font-size: 1.2rem; }
+    /* line 98, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .iconList li {
+      margin-bottom: 10px;
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      /* line 101, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .iconList li span {
+        display: table-cell;
+        vertical-align: top;
+        line-height: 1.5; }
+        /* line 105, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .iconList li span.icon {
+          width: 4%; }
+        /* line 108, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .iconList li span.text {
+          width: 96%; }
+    /* line 114, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper .small_t_list {
+      margin-top: 12px;
+      font-size: 1.4rem; }
+      /* line 117, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper .small_t_list li {
+        width: 100%;
+        margin: 0 0 6px 0; }
+        /* line 120, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .small_t_list li:last-of-type {
+          margin: 0; }
+        /* line 124, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .small_t_list li span.icon {
+          width: 2%; }
+        /* line 127, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .wrapper .small_t_list li span.text {
+          width: 98%; }
+    /* line 133, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .wrapper table {
+      width: 100%;
+      border: 1px solid #ddd; }
+      /* line 136, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper table tr {
+        border: 1px solid #ddd; }
+      /* line 139, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper table th, .wrapper table td {
+        padding: 12px; }
+      /* line 142, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper table th {
+        width: 45%;
+        background: #c3d7f2;
+        font-weight: bold; }
+      /* line 147, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .wrapper table td {
+        width: 55%;
+        line-height: 1.5; }
+  /* line 155, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .newslist__item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px; }
+    /* line 159, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .newslist__item__inner {
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      /* line 161, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .newslist__item__inner time,
+      .newslist__item__inner p {
+        display: table-cell;
+        vertical-align: top;
+        line-height: 1.5; }
+      /* line 167, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .newslist__item__inner time {
+        color: #666666;
+        width: 150px; }
+      /* line 171, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .newslist__item__inner p {
+        width: 100%; }
+        /* line 173, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .newslist__item__inner p .new {
+          display: inline-block;
+          padding: 0 4px;
+          background: #b6edd9;
+          color: #fff;
+          border-radius: 4px;
+          margin-right: 8px;
+          font-size: 1.2rem; }
+  /* line 186, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .historyLink {
+    text-align: right;
+    margin-top: 10px; }
+    /* line 187, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .historyLink .fa-history {
+      margin-right: 2px;
+      color: #001b43; }
+  /* line 195, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    /* line 200, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    ol.about li {
+      margin-bottom: 24px; }
+      /* line 202, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      ol.about li:last-of-type {
+        margin: 0; }
+      /* line 205, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      ol.about li img {
+        width: 500px;
+        margin: 0 auto; }
+      /* line 209, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      ol.about li div {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 10px; }
+        /* line 212, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        ol.about li div > span {
+          font-weight: bold;
+          display: table-cell;
+          vertical-align: top;
+          line-height: 1.7; }
+          /* line 217, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          ol.about li div > span.number {
+            width: 30px; }
+      /* line 222, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      ol.about li ol {
+        padding-left: 30px; }
+        /* line 224, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        ol.about li ol li {
+          margin-bottom: 20px; }
+          /* line 226, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          ol.about li ol li > span {
+            display: table-cell;
+            vertical-align: top;
+            line-height: 1.7; }
+            /* line 230, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+            ol.about li ol li > span.number {
+              width: 25px;
+              color: #001b43;
+              font-size: 1.9rem;
+              vertical-align: -2px; }
+  /* line 242, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .groupImg {
+    margin-top: 30px; }
+  /* line 245, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .aboutMethod {
+    width: 500px;
+    margin: 0 auto !important;
+    background-color: #001b43;
+    padding: 20px !important;
+    box-sizing: border-box; }
+    /* line 251, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .aboutMethod__title {
+      background-color: #c3d7f2;
+      color: #001b43;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 20px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: 2.2rem !important; }
+    /* line 262, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .aboutMethod__list {
+      list-style-type: decimal; }
+      /* line 264, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .aboutMethod__list li {
+        margin-bottom: 14px !important;
+        color: #fff;
+        line-height: 1.4; }
+        /* line 268, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .aboutMethod__list li:last-of-type {
+          margin: 0 !important; }
+  /* line 276, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .page h2 {
+    color: #001b43;
+    text-align: center;
+    font-size: 3.4rem;
+    position: relative;
+    margin-bottom: 20px; }
+  /* line 284, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .page .box__white p {
+    line-height: 1.6; }
+  /* line 287, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .page .box__white > p {
+    margin-bottom: 20px; }
+  /* line 291, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .page .box__white > section h4 {
+    margin-bottom: 10px;
+    line-height: 1.4; }
+  /* line 295, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .page .box__white > section > section {
+    margin-top: 20px; }
+    /* line 297, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .page .box__white > section > section:last-of-type {
+      margin: 0; }
+    /* line 300, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .page .box__white > section > section a {
+      color: #03A9F4; }
+  /* line 309, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company > li {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0; }
+    /* line 312, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .company > li:first-of-type {
+      padding: 0 0 20px; }
+    /* line 315, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .company > li:last-of-type {
+      border: none;
+      padding: 20px 0 0; }
+  /* line 321, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company__item__inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    /* line 323, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .company__item__inner > div {
+      display: table-cell;
+      vertical-align: top; }
+  /* line 328, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company__item__left {
+    width: 140px;
+    font-weight: bold; }
+  /* line 332, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company__item__right {
+    width: 100%; }
+    /* line 335, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .company__item__right ul li {
+      margin-bottom: 8px;
+      line-height: 1.6; }
+      /* line 338, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .company__item__right ul li:last-of-type {
+        margin: 0; }
+  /* line 346, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company .access p {
+    font-weight: bold;
+    margin-bottom: 8px; }
+  /* line 350, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .company .access iframe {
+    width: 100%;
+    height: 40vh; }
+  /* line 359, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList > li {
+    margin-bottom: 20px; }
+    /* line 361, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList > li:last-of-type {
+      margin: 0; }
+    /* line 365, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList > li > div:first-of-type {
+      margin-bottom: 8px;
+      font-weight: bold; }
+  /* line 371, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList.btns {
+    margin-top: 20px; }
+    /* line 373, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList.btns input {
+      height: 44px;
+      line-height: 44px; }
+  /* line 379, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .name ul {
+    display: flex;
+    justify-content: space-between; }
+    /* line 382, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList .name ul li {
+      width: 48%; }
+  /* line 387, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .must {
+    font-size: 1.2rem;
+    padding: 2px 4px;
+    font-weight: normal;
+    margin-left: 8px; }
+  /* line 393, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .small {
+    font-size: 1.3rem;
+    margin-left: 4px; }
+  /* line 399, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .birth li:nth-child(odd) {
+    width: 33%; }
+  /* line 403, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .birth select {
+    width: 100%;
+    background-size: 20px; }
+  /* line 407, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .birth p {
+    padding: 0 8px; }
+  /* line 412, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .address .banchi {
+    margin-top: 14px; }
+  /* line 418, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .jobLlist ul li {
+    margin-bottom: 14px; }
+    /* line 420, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList .jobLlist ul li:last-of-type {
+      margin: 0; }
+  /* line 425, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .jobLlist select {
+    background: url("../images/common/icon_arrow_bottom.png") no-repeat 96% center;
+    background-size: 20px; }
+  /* line 430, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .fixedPhone {
+    margin-top: 10px; }
+  /* line 434, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .formList .radioCheckList li {
+    margin: 10px; }
+    /* line 437, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .formList .radioCheckList li label input[type="text"] {
+      width: 612px;
+      margin: 0 0 0 8px; }
+  /* line 445, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  form .btns {
+    margin-top: 20px;
+    text-align: center; }
+    /* line 448, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    form .btns li {
+      width: 348px;
+      vertical-align: top;
+      display: inline-block; }
+      /* line 452, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      form .btns li input {
+        cursor: pointer;
+        border: none;
+        font-weight: bold; }
+      /* line 457, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      form .btns li.backBtnWrap {
+        margin-right: 10px; }
+        /* line 459, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        form .btns li.backBtnWrap:hover {
+          opacity: 0.7; }
+        /* line 462, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        form .btns li.backBtnWrap input {
+          line-height: 1;
+          background: #ddd;
+          color: #505050;
+          font-weight: normal; }
+  /* line 475, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .confirm .formList .s_first {
+    margin-right: 20px; }
+  /* line 482, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__complete p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem; }
+  /* line 487, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__complete .button--back {
+    height: 40px;
+    line-height: 40px;
+    width: 400px;
+    margin: 40px auto 0; }
+    /* line 493, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .box__complete .button--back a:hover {
+      background: #b6edd9;
+      color: #fff; }
+  /* line 502, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #overview .iconList {
+    margin-bottom: 20px; }
+    /* line 504, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #overview .iconList .icon {
+      color: #001b43; }
+      /* line 506, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      #overview .iconList .icon .fa-pen-square {
+        font-size: 1.9rem;
+        position: relative;
+        top: 2px; }
+  /* line 514, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #overview section figure {
+    margin: 0; }
+    /* line 516, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #overview section figure img {
+      display: block;
+      margin: 0 auto;
+      width: 500px; }
+  /* line 526, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #production a {
+    color: #03A9F4; }
+  /* line 530, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #production .targetBlink li {
+    margin-bottom: 16px; }
+    /* line 532, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #production .targetBlink li:last-of-type {
+      margin: 0; }
+    /* line 535, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #production .targetBlink li .fa-external-link-alt {
+      margin-left: 6px; }
+  /* line 540, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #production p {
+    text-align: right;
+    margin-top: 40px; }
+  /* line 546, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .faqNav {
+    margin-bottom: 10px; }
+    /* line 548, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .faqNav ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      /* line 550, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .faqNav ul li {
+        margin-bottom: 10px; }
+        /* line 552, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .faqNav ul li a {
+          color: #03A9F4;
+          line-height: 1.4; }
+        /* line 556, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        .faqNav ul li .fa-angle-down {
+          margin-left: 4px;
+          font-size: 1.8rem;
+          vertical-align: -4px; }
+  /* line 565, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .faqList li {
+    margin-bottom: 20px; }
+    /* line 567, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .faqList li:last-of-type {
+      margin: 0; }
+    /* line 570, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .faqList li p {
+      padding-left: 30px; }
+      /* line 572, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .faqList li p.q {
+        background: url("../images/faq/icon_q.png") no-repeat left 2px;
+        background-size: 24px 24px;
+        margin-bottom: 8px;
+        font-weight: bold; }
+      /* line 578, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .faqList li p.a {
+        background: url("../images/faq/icon_a.png") no-repeat left 2px;
+        background-size: 24px 24px; }
+  /* line 588, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .sitemap ul li {
+    margin-bottom: 20px; }
+    /* line 590, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .sitemap ul li:last-of-type {
+      margin: 0; }
+    /* line 593, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .sitemap ul li a {
+      color: #03A9F4; }
+  /* line 601, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .loginList li {
+    margin-bottom: 20px; }
+    /* line 603, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .loginList li span {
+      width: 130px; }
+  /* line 609, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__student .button {
+    margin: 40px 150px 0; }
+    /* line 611, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    .box__student .button a {
+      height: 40px;
+      line-height: 40px; }
+      /* line 614, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      .box__student .button a:hover {
+        background: #001b43;
+        color: #fff; }
+  /* line 624, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__link table th {
+    text-align: left; }
+  /* line 627, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__link table th, .box__link table td {
+    width: 50%; }
+  /* line 631, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  .box__link .fa-external-link-alt {
+    margin-left: 6px; }
+  /* line 637, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #howto table {
+    width: 500px;
+    margin: 0 auto;
+    background: #fbfbfb;
+    border-collapse: collapse; }
+    /* line 644, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #howto table tr th:first-of-type {
+      border-right: 1px solid #ddd; }
+    /* line 649, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #howto table tr td:first-of-type {
+      border-right: 1px solid #ddd; }
+      /* line 651, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      #howto table tr td:first-of-type strong {
+        font-weight: bold; }
+    /* line 657, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #howto table th, #howto table td {
+      width: 50%;
+      text-align: center; }
+  /* line 662, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #howto .c_text {
+    text-align: right;
+    margin-right: 104px;
+    font-size: 1.2rem;
+    color: #c91212; }
+  /* line 671, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #everyone p {
+    margin-bottom: 20px; }
+    /* line 673, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #everyone p:last-of-type {
+      margin: 0; }
+  /* line 680, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #studio dl {
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    /* line 682, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #studio dl .fa-subway {
+      margin-right: 10px;
+      color: #001b43; }
+    /* line 686, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #studio dl dt, #studio dl dd {
+      display: table-cell;
+      vertical-align: top; }
+    /* line 690, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #studio dl dt {
+      width: 16%; }
+    /* line 693, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #studio dl dd {
+      width: 84%; }
+      /* line 696, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+      #studio dl dd ul li {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 8px; }
+        /* line 699, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        #studio dl dd ul li:last-of-type {
+          margin: 0; }
+        /* line 702, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+        #studio dl dd ul li span {
+          display: table-cell;
+          vertical-align: top; }
+          /* line 705, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          #studio dl dd ul li span.train {
+            width: 60%; }
+          /* line 708, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+          #studio dl dd ul li span.foot {
+            width: 40%; }
+  /* line 716, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #studio #maps {
+    height: 400px;
+    border: 2px solid #2196F3; }
+  /* line 720, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+  #studio figure {
+    margin: 0; }
+    /* line 722, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/pc/parts/_contents.scss */
+    #studio figure img {
+      height: 400px;
+      border-radius: 10px;
+      border: 2px solid #2196F3; } }
+
+@media only screen and (max-width: 767px) {
+  /* table of contents----------------------------------
+1.フッター
+2.ボタンエリア
+----------------------------------------------------*/
+  /* line 7, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+  .footer {
+    font-size: 1rem;
+    background: #001b43;
+    padding: 20px 10px;
+    color: #fff;
+    text-align: center; }
+    /* line 14, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .footer ul.sns {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 0; }
+      /* line 18, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .footer ul.sns li {
+        margin-right: 14px;
+        display: inline-block; }
+        /* line 21, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+        .footer ul.sns li:last-of-type {
+          margin: 0; }
+        /* line 24, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+        .footer ul.sns li a {
+          font-size: 3rem;
+          color: #fff; }
+    /* line 30, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .footer ul.info {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      /* line 33, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .footer ul.info li {
+        margin: 10px; }
+        /* line 35, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+        .footer ul.info li a {
+          font-size: 1.4rem;
+          color: #fff; }
+    /* line 42, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .footer small {
+      text-align: center;
+      display: block;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      line-height: 1.4; }
+    /* line 49, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .footer .info {
+      margin-top: 10px; }
+      /* line 51, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .footer .info_tel {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 5px; }
+        /* line 55, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+        .footer .info_tel .fa-mobile-alt {
+          margin-right: 4px;
+          font-size: 1.5rem; }
+      /* line 60, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .footer .info_date {
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: 1.3px; }
+  /* line 69, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+  .btnArea {
+    margin: 20px; }
+    /* line 72, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .btnArea div:last-of-type {
+      margin-top: 20px; }
+    /* line 76, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+    .btnArea a {
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.6rem; }
+      /* line 80, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .btnArea a .fa-clipboard {
+        margin-right: 4px;
+        font-size: 2rem; }
+      /* line 84, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_footer.scss */
+      .btnArea a .fa-question-circle {
+        margin-right: 4px;
+        font-size: 2rem; }
+  /* table of contents----------------------------------
+1.ヘッダー
+----------------------------------------------------*/
+  /* line 6, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+  .header {
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #ddd;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #fff; }
+    /* line 14, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+    .header__inner {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    /* line 22, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+    .header__left__inner {
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      /* line 24, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+      .header__left__inner div {
+        display: table-cell;
+        vertical-align: middle; }
+      /* line 28, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+      .header__left__inner .img {
+        width: 40px; }
+        /* line 30, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+        .header__left__inner .img img {
+          width: 34px; }
+      /* line 36, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+      .header__left__inner .text p {
+        font-size: 1rem;
+        line-height: 1.4; }
+      /* line 41, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+      .header__left__inner .text h1 img {
+        width: 200px;
+        object-fit: contain; }
+    /* line 49, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+    .header__left a {
+      display: block;
+      color: #505050; }
+    /* line 55, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+    .header__right .button {
+      width: 90px; }
+      /* line 57, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+      .header__right .button a {
+        font-size: 1.4rem;
+        padding: 8px;
+        line-height: 15px;
+        text-align: center; }
+        /* line 62, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_header.scss */
+        .header__right .button a .fa-file-alt {
+          margin-right: 2px; }
+  /* table of contents----------------------------------
+1.PC用
+2.SP用
+----------------------------------------------------*/
+  /* line 7, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_media_query.scss */
+  .forPC {
+    display: none !important; }
+  /* line 11, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_media_query.scss */
+  .forSP {
+    display: block; }
+  /* table of contents----------------------------------
+1.ページトップ
+----------------------------------------------------*/
+  /* line 6, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_page_top.scss */
+  #toTheTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    z-index: 10; }
+    /* line 12, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_page_top.scss */
+    #toTheTop a {
+      display: block;
+      color: #fff;
+      font-size: 4rem;
+      text-decoration: none;
+      border: 1px solid #001b43;
+      border-radius: 50%;
+      background: #001b43; }
+  /* table of contents----------------------------------
+1.swipe
+----------------------------------------------------*/
+  /* line 6, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper-container {
+    height: 370px; }
+  /* line 9, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper_img {
+    padding: 20px;
+    box-sizing: border-box; }
+  /* line 13, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper_img01 {
+    background-color: #001b43;
+    color: #fff; }
+    /* line 16, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img01 p {
+      line-height: 1.5;
+      text-align: center; }
+      /* line 19, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img01 p.p1 {
+        font-weight: bold;
+        font-size: 9vw;
+        margin-bottom: 24px; }
+      /* line 24, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img01 p.p2 {
+        font-size: 7vw;
+        margin-bottom: 24px; }
+      /* line 28, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img01 p.p3 {
+        font-size: 7.2vw;
+        color: #b6edd9; }
+  /* line 34, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper_img02 {
+    background: #b6edd9 url("../images/top/icon_bg_may.png") no-repeat 92% 88%;
+    background-size: 30%;
+    color: #001b43; }
+    /* line 40, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img02 p {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      line-height: 1.5;
+      font-size: 4.4vw;
+      margin-bottom: 8px; }
+      /* line 45, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img02 p.p1 {
+        font-weight: bold;
+        font-size: 4.6vw;
+        margin-bottom: 12px;
+        text-align: center; }
+      /* line 51, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img02 p:last-of-type {
+        margin-bottom: 0; }
+      /* line 54, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img02 p span {
+        display: table-cell;
+        vertical-align: top; }
+        /* line 57, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+        .swiper_img02 p span.number {
+          width: 7.5vw; }
+        /* line 60, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+        .swiper_img02 p span.text {
+          width: 100%; }
+  /* line 66, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper_img03 {
+    background: #001b43;
+    color: #fff;
+    position: relative; }
+    /* line 70, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img03 .theWall {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%; }
+    /* line 77, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img03 p {
+      font-size: 3.2vw;
+      line-height: 1.4;
+      text-align: center;
+      color: #b6edd9;
+      font-weight: bold; }
+      /* line 83, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img03 p.p1 {
+        margin-bottom: 14px; }
+      /* line 86, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img03 p.p2 {
+        margin-top: 14px; }
+    /* line 90, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img03 ol {
+      list-style-type: decimal;
+      padding: 0 10px;
+      font-size: 2.2vw; }
+      /* line 94, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img03 ol li {
+        margin-bottom: 10px;
+        line-height: 1.5; }
+        /* line 97, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+        .swiper_img03 ol li:last-of-type {
+          margin: 0; }
+  /* line 103, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper_img04 {
+    background: #b6edd9; }
+    /* line 105, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+    .swiper_img04 a {
+      display: block;
+      font-size: 3rem;
+      font-weight: bold; }
+      /* line 109, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img04 a p {
+        line-height: 1.5;
+        text-align: center;
+        color: #505050; }
+      /* line 114, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img04 a .t_color {
+        color: #fff; }
+      /* line 117, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+      .swiper_img04 a .fa-twitter-square {
+        font-size: 7.5rem;
+        margin-top: 20px; }
+  /* line 123, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper-pagination-bullet-active {
+    background: #fff; }
+  /* line 126, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/common/_swipe.scss */
+  .swiper-pagination-bullet {
+    background: #fff; }
+  /* table of contents----------------------------------
+1.共通
+2.最新情報
+3.特色
+4.個人情報
+5.会社概要
+6.フォーム
+7.レッスン概要
+8.グループプロダクション
+9.サイトマップ
+10.よくある質問
+11.ログイン
+12.リンク
+13.審査日程
+14.みなさまへ
+----------------------------------------------------*/
+  /* line 20, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #page .wrapper {
+    background: #c3d7f2; }
+  /* line 24, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .break {
+    display: block; }
+  /* line 27, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .wrapper {
+    padding-top: 66px; }
+    /* line 29, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper .box__lightblue {
+      padding: 10px; }
+    /* line 32, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper .box__white {
+      padding: 40px 24px 40px 20px; }
+    /* line 35, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper .box {
+      font-size: 1.6rem; }
+      /* line 37, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper .box h2 {
+        color: #001b43;
+        line-height: 44px;
+        font-size: 2rem;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 10px; }
+        /* line 44, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box h2 .fa-twitter {
+          display: inline-block;
+          margin-right: 4px;
+          font-size: 1.6rem; }
+        /* line 49, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box h2 .fa-chevron-down {
+          position: absolute;
+          top: 14px;
+          right: 10px;
+          animation: spin2 0.5s linear forwards; }
+        /* line 55, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box h2 .on {
+          animation: spin 0.5s linear forwards; }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(180deg); } }
+  @keyframes spin2 {
+    0% {
+      transform: rotate(180deg); }
+    100% {
+      transform: rotate(0deg); } }
+      /* line 68, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper .box__contents {
+        display: none; }
+        /* line 71, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box__contents__inner p {
+          line-height: 1.5; }
+      /* line 76, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper .box section {
+        margin-bottom: 30px; }
+        /* line 78, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box section:last-of-type {
+          margin: 0; }
+        /* line 81, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box section h3 {
+          margin-bottom: 18px;
+          line-height: 1.4;
+          position: relative;
+          border-top: 1px solid #001b43;
+          border-bottom: 1px solid #001b43;
+          padding: 4px 0; }
+        /* line 89, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .box section section {
+          margin-bottom: 18px; }
+          /* line 91, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+          .wrapper .box section section h4 {
+            margin-bottom: 8px;
+            line-height: 1.4; }
+            /* line 94, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+            .wrapper .box section section h4.class {
+              background: #001b43;
+              color: #fff;
+              border-radius: 2px;
+              padding: 2px 4px;
+              display: inline-block; }
+          /* line 102, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+          .wrapper .box section section > .small {
+            font-size: 1.3rem;
+            margin-top: 10px; }
+    /* line 110, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper .iconList li {
+      margin-bottom: 10px;
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      /* line 113, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper .iconList li span {
+        display: table-cell;
+        vertical-align: top;
+        line-height: 1.5; }
+        /* line 117, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .iconList li span.icon {
+          width: 8%; }
+        /* line 120, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .iconList li span.text {
+          width: 92%; }
+    /* line 126, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper .small_t_list {
+      margin-top: 12px;
+      font-size: 1.3rem; }
+      /* line 129, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper .small_t_list li {
+        width: 100%;
+        margin: 0 0 6px 0; }
+        /* line 132, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .small_t_list li:last-of-type {
+          margin: 0; }
+        /* line 136, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .small_t_list li span.icon {
+          width: 6%; }
+        /* line 139, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .wrapper .small_t_list li span.text {
+          width: 94%; }
+    /* line 145, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .wrapper table {
+      width: 100%;
+      border: 1px solid #ddd; }
+      /* line 148, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper table tr {
+        border: 1px solid #ddd; }
+      /* line 151, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper table th, .wrapper table td {
+        padding: 12px; }
+      /* line 154, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper table th {
+        width: 45%;
+        background: #c3d7f2;
+        font-weight: bold; }
+      /* line 159, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .wrapper table td {
+        width: 55%;
+        line-height: 1.5; }
+  /* line 167, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .newslist__item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px; }
+    /* line 171, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .newslist__item__inner {
+      display: table;
+      table-layout: fixed;
+      width: 100%; }
+      /* line 173, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .newslist__item__inner time,
+      .newslist__item__inner p {
+        display: table-cell;
+        vertical-align: top;
+        line-height: 1.5; }
+      /* line 179, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .newslist__item__inner time {
+        color: #666666;
+        width: 120px; }
+      /* line 183, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .newslist__item__inner p {
+        width: 100%; }
+        /* line 185, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .newslist__item__inner p .new {
+          display: inline-block;
+          padding: 0 4px;
+          background: #b6edd9;
+          color: #fff;
+          border-radius: 4px;
+          margin-right: 8px;
+          font-size: 1.2rem; }
+  /* line 198, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .historyLink {
+    text-align: right;
+    margin-top: 10px; }
+    /* line 199, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .historyLink .fa-history {
+      margin-right: 2px;
+      color: #001b43; }
+  /* line 208, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    /* line 213, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    ol.about li {
+      margin-bottom: 14px; }
+      /* line 215, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      ol.about li:last-of-type {
+        margin: 0; }
+      /* line 218, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      ol.about li div {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        margin-bottom: 10px; }
+        /* line 221, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        ol.about li div > span {
+          font-weight: bold; }
+      /* line 225, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      ol.about li img {
+        width: 100%; }
+      /* line 228, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      ol.about li span {
+        display: table-cell;
+        vertical-align: top;
+        line-height: 1.5; }
+        /* line 232, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        ol.about li span.number {
+          width: 20px; }
+      /* line 236, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      ol.about li ol {
+        padding-left: 20px; }
+        /* line 238, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        ol.about li ol li {
+          margin-bottom: 14px; }
+        /* line 241, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        ol.about li ol .number {
+          width: 25px;
+          color: #001b43;
+          font-size: 1.9rem;
+          vertical-align: -2px; }
+          /* line 246, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+          ol.about li ol .number .fa-check-square {
+            position: relative;
+            top: -1px; }
+  /* line 255, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .groupImg {
+    margin-top: 20px; }
+  /* line 258, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .aboutMethod {
+    background-color: #001b43;
+    padding: 20px !important;
+    box-sizing: border-box; }
+    /* line 262, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .aboutMethod__title {
+      background-color: #c3d7f2;
+      color: #001b43;
+      height: 30px;
+      line-height: 30px !important;
+      text-align: center;
+      padding: 0 !important;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: 1.3rem !important; }
+    /* line 273, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .aboutMethod__list {
+      list-style-type: decimal; }
+      /* line 275, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .aboutMethod__list li {
+        margin-bottom: 14px !important;
+        color: #fff;
+        line-height: 1.4;
+        font-size: 1.4rem !important; }
+        /* line 280, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .aboutMethod__list li:last-of-type {
+          margin: 0 !important; }
+  /* line 287, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .page {
+    padding: 20px 10px;
+    font-size: 1.6rem; }
+    /* line 290, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .page h2 {
+      color: #001b43;
+      text-align: center;
+      margin-bottom: 10px; }
+    /* line 296, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .page .box__white p {
+      line-height: 1.6; }
+    /* line 299, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .page .box__white > p {
+      margin-bottom: 20px; }
+    /* line 302, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .page .box__white > section {
+      margin-bottom: 20px; }
+      /* line 304, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .page .box__white > section:last-of-type {
+        margin: 0; }
+      /* line 307, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .page .box__white > section h3, .page .box__white > section h4 {
+        margin-bottom: 10px;
+        line-height: 1.4; }
+      /* line 311, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .page .box__white > section > section {
+        margin-top: 20px; }
+        /* line 313, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .page .box__white > section > section a {
+          color: #03A9F4; }
+  /* line 322, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company > li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0; }
+    /* line 325, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .company > li:first-of-type {
+      padding: 0 0 10px; }
+    /* line 328, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .company > li:last-of-type {
+      border: none;
+      padding: 10px 0 0; }
+  /* line 334, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company__item__inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    /* line 336, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .company__item__inner > div {
+      display: table-cell;
+      vertical-align: top; }
+  /* line 341, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company__item__left {
+    width: 90px;
+    font-weight: bold; }
+  /* line 345, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company__item__right {
+    width: 100%; }
+    /* line 348, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .company__item__right ul li {
+      margin-bottom: 8px;
+      line-height: 1.6; }
+      /* line 351, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .company__item__right ul li:last-of-type {
+        margin: 0; }
+  /* line 359, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company .access p {
+    font-weight: bold;
+    margin-bottom: 8px; }
+  /* line 363, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .company .access iframe {
+    width: 100%;
+    height: 40vh; }
+  /* line 372, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .formList > li {
+    margin-bottom: 20px; }
+    /* line 374, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .formList > li:last-of-type {
+      margin: 0; }
+    /* line 378, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .formList > li > div:first-of-type {
+      margin-bottom: 8px;
+      font-weight: bold; }
+  /* line 384, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .formList.btns {
+    margin-top: 20px; }
+    /* line 386, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .formList.btns input {
+      height: 44px;
+      line-height: 44px; }
+  /* line 392, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .formList .name ul {
+    display: flex;
+    justify-content: space-between; }
+    /* line 395, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .formList .name ul li {
+      width: 48%; }
+  /* line 401, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .must {
+    font-size: 1.2rem;
+    padding: 2px 4px;
+    font-weight: normal;
+    margin-left: 8px; }
+  /* line 407, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .small {
+    font-size: 1.3rem;
+    margin-left: 4px; }
+  /* line 413, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .birth li:nth-child(odd) {
+    width: 33%; }
+  /* line 417, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .birth select {
+    width: 100%;
+    background-size: 14px; }
+  /* line 421, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .birth p {
+    padding: 0 8px; }
+  /* line 426, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .address .banchi {
+    margin-top: 14px; }
+  /* line 432, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .jobLlist ul li {
+    margin-bottom: 14px; }
+    /* line 434, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .jobLlist ul li:last-of-type {
+      margin: 0; }
+  /* line 439, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .jobLlist select {
+    background: url("../images/common/icon_arrow_bottom.png") no-repeat 96% center;
+    background-size: 14px; }
+  /* line 444, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .fixedPhone {
+    margin-top: 10px; }
+  /* line 448, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .radioCheckList li {
+    margin: 10px; }
+    /* line 451, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .radioCheckList li label input[type="text"] {
+      width: 56vw;
+      margin: 0 0 0 8px; }
+  /* line 458, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  form .btns {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    /* line 462, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    form .btns li {
+      width: 100%; }
+      /* line 464, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      form .btns li input {
+        border: none;
+        font-weight: bold; }
+      /* line 468, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      form .btns li.backBtnWrap {
+        margin-right: 10px; }
+        /* line 470, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        form .btns li.backBtnWrap input {
+          line-height: 1;
+          background: #ddd;
+          color: #505050;
+          font-weight: normal; }
+  /* line 481, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__complete p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.6rem; }
+  /* line 486, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__complete .button--back {
+    height: 40px;
+    line-height: 40px;
+    margin: 40px 0 0; }
+  /* line 494, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #overview .iconList {
+    margin-bottom: 20px; }
+    /* line 496, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #overview .iconList .icon {
+      color: #001b43; }
+      /* line 498, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      #overview .iconList .icon .fa-pen-square {
+        font-size: 1.9rem;
+        position: relative;
+        top: 2px; }
+  /* line 506, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #overview section figure {
+    margin: 0; }
+    /* line 508, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #overview section figure img {
+      width: 100%; }
+  /* line 516, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #production a {
+    color: #03A9F4; }
+  /* line 520, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #production .targetBlink li {
+    margin-bottom: 16px; }
+    /* line 522, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #production .targetBlink li:last-of-type {
+      margin: 0; }
+    /* line 525, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #production .targetBlink li .fa-external-link-alt {
+      margin-left: 6px; }
+  /* line 530, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #production p {
+    text-align: right;
+    margin-top: 40px; }
+  /* line 538, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .sitemap ul li {
+    margin-bottom: 20px; }
+    /* line 540, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .sitemap ul li:last-of-type {
+      margin: 0; }
+    /* line 543, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .sitemap ul li a {
+      color: #03A9F4;
+      font-size: 1.6rem; }
+  /* line 551, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .faqNav {
+    margin-bottom: 10px; }
+    /* line 553, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .faqNav ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      /* line 556, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .faqNav ul li {
+        margin: 0 10px 10px 0; }
+        /* line 558, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .faqNav ul li:last-of-type {
+          margin: 0 0 10px 0; }
+        /* line 561, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .faqNav ul li a {
+          color: #03A9F4;
+          line-height: 1.4; }
+        /* line 565, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+        .faqNav ul li .fa-angle-down {
+          margin-left: 4px;
+          font-size: 1.8rem;
+          vertical-align: -4px; }
+  /* line 574, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .faqList li {
+    margin-bottom: 20px; }
+    /* line 576, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .faqList li:last-of-type {
+      margin: 0; }
+    /* line 579, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .faqList li p {
+      line-height: 1.5;
+      padding-left: 30px; }
+      /* line 582, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .faqList li p.q {
+        background: url("../images/faq/icon_q.png") no-repeat left 2px;
+        background-size: 24px 24px;
+        margin-bottom: 8px;
+        font-weight: bold; }
+      /* line 588, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      .faqList li p.a {
+        background: url("../images/faq/icon_a.png") no-repeat left 2px;
+        background-size: 24px 24px; }
+  /* line 597, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .loginList li {
+    margin-bottom: 20px; }
+    /* line 599, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .loginList li span {
+      width: 130px; }
+  /* line 605, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__student .button {
+    margin-top: 30px; }
+    /* line 607, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    .box__student .button a {
+      height: 40px;
+      line-height: 40px; }
+  /* line 616, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__link table th {
+    text-align: left; }
+  /* line 619, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__link table th, .box__link table td {
+    width: 50%;
+    line-height: 1.5; }
+  /* line 624, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  .box__link .fa-external-link-alt {
+    margin-left: 6px; }
+  /* line 630, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #howto table {
+    background: #fbfbfb;
+    border-collapse: collapse;
+    font-size: 1.3rem; }
+    /* line 635, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #howto table th:first-of-type {
+      border-right: 1px solid #ddd; }
+    /* line 641, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #howto table tr td:first-of-type {
+      border-right: 1px solid #ddd; }
+      /* line 643, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      #howto table tr td:first-of-type strong {
+        font-weight: bold; }
+    /* line 649, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #howto table th {
+      width: 55%;
+      text-align: center; }
+    /* line 653, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #howto table td {
+      width: 45%;
+      text-align: center; }
+  /* line 658, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #howto .c_text {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #c91212; }
+  /* line 666, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #everyone p {
+    margin-bottom: 10px; }
+    /* line 668, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #everyone p:last-of-type {
+      margin: 0; }
+  /* line 675, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #studio #maps {
+    height: 300px;
+    border: 2px solid #2196F3; }
+  /* line 679, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #studio figure {
+    margin: 0; }
+    /* line 681, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #studio figure img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #2196F3; }
+  /* line 688, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #studio dl .fa-subway {
+    margin-right: 10px;
+    color: #001b43; }
+  /* line 692, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #studio dl dt {
+    margin-bottom: 8px; }
+  /* line 695, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+  #studio dl dd {
+    margin: 0; }
+    /* line 698, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+    #studio dl dd ul li {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      margin-bottom: 6px;
+      line-height: 1.4; }
+      /* line 702, /Users/nichinare/Desktop/workspace/web/tokyo/assets/src/sass/sp/parts/_contents.scss */
+      #studio dl dd ul li:last-of-type {
+        margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */

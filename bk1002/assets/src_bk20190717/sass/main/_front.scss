@@ -1,0 +1,85 @@
+/* table of contents----------------------------------
+1.表紙
+----------------------------------------------------*/
+//1.表紙
+//共通
+.swiper-container {
+    background-color: $color_grey3;
+}
+
+.front {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    &_date {
+        position: absolute;
+        text-align: right;
+    }
+}
+
+//PC版
+@include pc {
+    .front {
+        &_date {
+            top:  $wide*35;
+            right: $wide*4;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+
+    .past {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: $wide*10 $wide*24;
+
+        .front_img {
+            img {
+                border: 4px solid $color_black3;
+                box-shadow: 0 0 10px $color_black1;
+            }
+        }
+
+        p {
+            margin-top: $wide*2;
+            text-align: center;
+        }
+    }
+}
+
+//SP版
+@include sp {
+    .front {
+        &_date {
+            top:  $wide*14;
+            right: $wide*2;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+    }
+
+    .past {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: $wide*4 $wide*8;
+
+        .front_img {
+            img {
+                border: 2px solid $color_black3;
+                box-shadow: 0 0 6px $color_black1;
+            }
+        }
+
+        p {
+            margin-top: $wide*2;
+            text-align: center;
+        }
+    }
+}

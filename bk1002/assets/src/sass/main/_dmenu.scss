@@ -1,0 +1,194 @@
+/* table of contents----------------------------------
+1.メニュー
+----------------------------------------------------*/
+//1.メニュー
+.contents {
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#navTgl {
+	display: none;
+
+    &:checked ~ .contents {
+    	@include pc {
+            transform: translateX(-600px);
+        }
+
+        @include sp {
+            transform: translateX(-300px);
+        }
+    }
+
+    &:checked + .open {
+    	@include pc {
+            transform: translateX(-600px);
+        }
+
+        @include sp {
+            transform: translateX(-290px);
+        }
+    }
+
+    &:checked ~ .close {
+    	pointer-events: auto;
+    	background: rgba(0,0,0,.8);
+    }
+
+    &:checked ~ .menu {
+    	transform: none;
+    }
+}
+label {
+	cursor: pointer;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.open {
+	z-index: 2;
+    transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @include pc {
+        width: $wide*10;
+    	height: $wide*10;
+    }
+
+    @include sp {
+        width: 74px;
+    	height: 74px;
+    }
+}
+
+.close {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	transition: background .6s;
+}
+
+.menu {
+	z-index: 1;
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	right: 0;
+
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+    background-color: $color_white1;
+	transform: translateX(100%);
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @include pc {
+        width: 600px;
+    }
+
+    @include sp {
+        width: 300px;
+    }
+
+    .box_info {
+        position: relative;
+
+        @include pc {
+            padding-bottom: $wide*6.6;
+        }
+
+        @include sp {
+            padding-bottom: $wide*4.6;
+        }
+
+
+
+        &_title {
+            background: rgba($color_green2,0.3);
+            padding: 2px 4px;
+        }
+    }
+    //メニュー用ボタン
+    .btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        a {
+            padding: 0;
+            font-weight: normal;
+
+
+
+            @include pc {
+                width: 120px;
+                font-size: $normal_rem;
+                line-height: $wide*4;
+                height: $wide*4;
+                border: 1px solid $color_green1;
+
+                .fa-chevron-right {
+                    margin-left: 8px;
+                }
+
+                &:hover {
+                    background-color: $color_white1;
+                    color: $color_green1;
+                    border: 1px solid $color_green1
+                }
+            }
+
+            @include sp {
+                width: $wide*10;
+                font-size: $small_rem;
+                line-height: $wide*3.6;
+                height: $wide*3.6;
+
+                .fa-chevron-right {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    //タレント一覧
+    .tlist {
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        p {
+            text-align: right;
+        }
+
+        @include pc {
+            border: 2px solid $color_green2;
+            padding: $wide*1.2;
+            margin-top: $wide;
+            border-radius: 4px;
+
+            li {
+                line-height: 1.8;
+                &:not(:last-of-type) {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        @include sp {
+            border: 1px solid $color_green2;
+            padding: 8px;
+            margin-top: 6px;
+            border-radius: 2px;
+            font-size: $tiny_rem;
+
+            li {
+                line-height: 1.6;
+                &:not(:last-of-type) {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

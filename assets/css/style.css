@@ -489,6 +489,9 @@ body {
 .text_bold {
   font-weight: bold;
 }
+.text_center {
+  text-align: center;
+}
 
 img {
   vertical-align: top;
@@ -799,8 +802,12 @@ img {
   .footer_list_item a {
     font-size: 1.5rem;
   }
-  .footer small {
+  .footer .text_center {
     margin-top: 30px;
+    font-size: 1.3rem;
+  }
+  .footer small {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 766px) {
@@ -808,7 +815,7 @@ img {
     width: 100vw;
   }
   .footer_inner {
-    padding: 30px 20px;
+    padding: 20px 20px 10px;
   }
   .footer_main p {
     text-align: center;
@@ -818,10 +825,10 @@ img {
     width: 200px;
   }
   .footer_main_logo {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
   .footer_main_description {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
   .footer_main_twitter {
     margin-bottom: 30px;
@@ -839,8 +846,10 @@ img {
   .footer_list_item:not(:last-of-type) {
     margin: 0 20px 20px 0;
   }
-  .footer small {
+  .footer .text_center {
     margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: -0.6px;
   }
 }
 /* table of contents----------------------------------

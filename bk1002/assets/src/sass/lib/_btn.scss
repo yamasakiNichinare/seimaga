@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* table of contents----------------------------------
+1.ボタン共通
+2.オレンジボタン
+3.グレーボタン
+----------------------------------------------------*/
+.btn {
+    font-weight: bold;
+
+    //1.ボタン共通
+    a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: $color_white1;
+        font-weight: bold;
+    }
+
+    //2.オレンジボタン
+    &_orange {
+        a {
+            background-color: $color_orange2;
+        }
+    }
+
+    //3.グレーボタン
+    &_gray {
+        background-color: $color_grey4;
+        border: none;
+        color: $color_grey2;
+    }
+
+    //4.グループプロダクション用
+    &_artsvision {
+        a {
+            color: $color_artsvision;
+            border: 2px solid $color_artsvision;
+        }
+    }
+
+    &_imenterprise {
+        a {
+            color: $color_imenterprise;
+            border: 2px solid $color_imenterprise;
+        }
+    }
+
+    &_crazybox {
+        a {
+            color: $color_crazybox;
+            border: 2px solid $color_crazybox;
+        }
+    }
+
+    &_vims {
+        a {
+            color: $color_vims;
+            border: 2px solid $color_vims;
+        }
+    }
+
+    &_ariseproject {
+        a {
+            color: $color_ariseproject;
+            border: 2px solid $color_ariseproject;
+        }
+    }
+
+    &_mio {
+        a {
+            color: $color_mio;
+            border: 2px solid $color_mio;
+        }
+    }
+
+    &_d {
+        a {
+            font-weight: bold;
+        }
+    }
+
+    //一覧を見る
+    &_green {
+        a {
+            background-color: $color_green1;
+        }
+    }
+}
+
+//PC版
+@include pc {
+    .btn {
+        a {
+            border-radius: $wide;
+            height: $wide*5.5;
+            line-height: $wide*5.5;
+            font-size: 2.4rem;
+        }
+        &_artsvision {
+            a {
+                &:hover {
+                    background: $color_artsvision;
+                }
+            }
+        }
+
+        &_imenterprise {
+            a {
+                &:hover {
+                    background: $color_imenterprise;
+                }
+            }
+        }
+
+        &_crazybox {
+            a {
+                &:hover {
+                    background: $color_crazybox;
+                }
+            }
+        }
+
+        &_vims {
+            a {
+                &:hover {
+                    background: $color_vims;
+                }
+            }
+        }
+
+        &_ariseproject {
+            a {
+                &:hover {
+                    background: $color_ariseproject;
+                }
+            }
+        }
+
+        &_mio {
+            a {
+                &:hover {
+                    background: $color_mio;
+                }
+            }
+        }
+
+        &_d {
+            a {
+                height: $wide*3;
+                line-height: $wide*3;
+                padding: 0 $wide*1.2;
+                transition: all .2sec ease-in-out;
+                font-size: $normal_rem;
+                border-radius: 4px;
+
+                &:hover {
+                    color: $color_white1;
+                }
+            }
+        }
+    }
+}
+
+//SP版
+@include sp {
+    .btn {
+        a {
+            border-radius: 4px;
+            height: $wide*4.4;
+            line-height: $wide*4.4;
+            font-size: 2rem;
+        }
+        &_d {
+            width: 49%;
+            a {
+                height: $wide*3;
+                line-height: $wide*3;
+                font-size: 1.3rem;
+                border-radius: 4px;
+            }
+        }
+    }
+}

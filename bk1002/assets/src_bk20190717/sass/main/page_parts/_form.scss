@@ -1,0 +1,144 @@
+/* table of contents----------------------------------
+1.フォーム
+----------------------------------------------------*/
+//1.フォーム
+input,textarea {
+    width: 100%;
+    border: 2px solid $color_grey1;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+input[type="submit"] {
+    background-color: $color_orange2;
+    border: none;
+    display: block;
+    color: $color_white1;
+}
+
+textarea {
+    resize: none;
+}
+.form_inner {
+    dl {
+        dt {
+            .must {
+                background-color: $color_orange1;
+                color: $color_white1;
+            }
+        }
+    }
+}
+
+.btns {
+    @include flexCenter;
+    justify-content: space-between;
+
+    .btn {
+        width: 49%;
+    }
+}
+
+//PC版
+@include pc {
+    //フォーム
+    input,textarea {
+        padding: $wide;
+        border-radius: 8px;
+    }
+
+    dl {
+        @include flexwrap;
+        align-items: center;
+
+        dt {
+            width: 30%;
+
+            .must {
+                padding: 2px 4px;
+                border-radius: 4px;
+                font-size: $normal_rem;
+                margin-left: $wide;
+            }
+
+            &:last-of-type {
+                margin-top: $wide*-22;
+            }
+        }
+        dd {
+            width: 70%;
+        }
+        dt,dd {
+            margin: 0 0 $wide*2 0;
+        }
+    }
+
+    input[type="submit"] {
+        font-size: 2.2rem;
+        cursor: pointer;
+    }
+    input[type="button"] {
+        cursor: pointer;
+    }
+
+    //確認画面
+    .form_confirm {
+        dl {
+            align-items: baseline;
+
+            dt {
+                margin-top: 0;
+            }
+        }
+    }
+
+    //完了画面
+    .box_complete {
+        .btns {
+            margin-top: $wide*4;
+        }
+    }
+}
+
+//SP版
+@include sp {
+    //フォーム
+    input,textarea {
+        padding: $wide*1.4;
+        border-radius: 6px;
+    }
+
+    input[type="submit"] {
+        font-size: 2rem;
+    }
+
+    //エラー位置調整
+    .formError {
+        left: $wide*18.2 !important;
+    }
+
+    //完了画面
+    .box_complete {
+        .btn {
+            margin: $wide*3 auto 0;
+        }
+    }
+
+    dl {
+        dt {
+            margin-bottom: $wide;
+
+            .must {
+                padding: 2px 4px;
+                border-radius: 4px;
+                font-size: $small_rem;
+                margin-left: $wide;
+            }
+        }
+
+        dd {
+            margin: 0 0 $wide*2 0;
+        }
+    }
+}
