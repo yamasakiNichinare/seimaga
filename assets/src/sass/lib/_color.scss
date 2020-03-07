@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* table of contents----------------------------------
 1.白
 2.黒
@@ -11,34 +12,29 @@
 9.グループプロダクション
 10.リンク
 ----------------------------------------------------*/
+
 //1.白
 $color_white1: #fff;
-
 //2.黒
 $color_black1: #000;
 $color_black2: #333;
 $color_black3: #444;
-
 //3.グレー
 $color_grey1: #ddd;
 $color_grey2: #999;
 $color_grey3: #ccc;
 $color_grey4: #f2f2f2;
-
 //4.緑
 $color_green1: #2e7d32;
 $color_green2: #43a047;
 $color_green3: #E8F5E9;
 $color_green4: #C8E6C9;
-
 //5.青
 $color_blue: #1e88e5;
-
 //5.SNS
 $pocket: #d3505a;
 $tw: #55acee;
 $line: #00b900;
-
 //6.カテゴリ
 $cate1: #974994;
 $cate2: #16B0DD;
@@ -46,14 +42,11 @@ $cate3: #68C74F;
 $cate4: #F7BC24;
 $cate5: #FD931D;
 $cate6: #E43B37;
-
 //7.赤
 $color_red1: #F44336;
-
 //8.オレンジ
 $color_orange1: #FFA000;
 $color_orange2: #FF6F00;
-
 //9.グループプロダクション
 $color_artsvision: #0D47A1;
 $color_imenterprise: #1B5E20;
@@ -61,6 +54,5 @@ $color_crazybox: #E65100;
 $color_vims: #B71C1C;
 $color_ariseproject: #558B2F;
 $color_mio: #4A148C;
-
 //10.リンク
 $color_visited: #7B1FA2;
